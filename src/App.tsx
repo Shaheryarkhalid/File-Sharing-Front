@@ -13,7 +13,7 @@ function App() {
   useEffect(() => {
     (async () => {
       try {
-        const res = await fetch('http://localhost:8080/auth', {
+        const res = await fetch('/api/auth', {
           method: 'GET',
 		  credentials: 'include',
         });

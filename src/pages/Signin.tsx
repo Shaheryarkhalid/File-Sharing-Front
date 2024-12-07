@@ -49,7 +49,7 @@ export default function Signin() {
 	//@ts-ignore
     if (Object.keys(errors).every((key) => !errors[key])) {
 		setIsSending(true)
-      fetch('http://localhost:8080/auth/login', {
+      fetch('/api/auth/login', {
         method: 'POST',
 		credentials: 'include',
         headers: {

@@ -4,7 +4,7 @@ export default function GetSingleFile({ file }: { file: { name: string } })
 	const [ fileUrl, setFileUrl ] = useState<string | null>(null);
 	useEffect(()=>{
 		(async ()=>{
-			const url = `http://localhost:8080/file/single/${file.name}`
+			const url = `/api/file/single/${file.name}`
 			const response = await fetch(url, {
 				method: 'GET',
 				credentials: 'include'
@@ -17,7 +17,7 @@ export default function GetSingleFile({ file }: { file: { name: string } })
 	},[file])
 	async function shareFile(fileName: string)
 	{
-		const response = await fetch('http://localhost:8080/file/share', { 
+		const response = await fetch('/api/file/share', { 
 			credentials: 'include',
 			method: 'POST',
 			headers: {

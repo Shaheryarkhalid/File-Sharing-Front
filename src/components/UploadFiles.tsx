@@ -27,7 +27,7 @@ export default function UploadFiles({ setUploaded }: { setUploaded: SetStateActi
 		formData.append('uploadedFile', file);
 	
 		try {
-		  const response = await fetch('http://localhost:8080/upload', {
+		  const response = await fetch('/api/upload', {
 			method: 'POST',
 			credentials: 'include',
 			body: formData,

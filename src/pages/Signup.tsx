@@ -72,7 +72,7 @@ export default function Signup() {
 	// @ts-ignore
 	if (Object.keys(errors).every((key) => !errors[key])) {
 	  setIsSending(true)
-	  fetch('http://localhost:8080/auth/register', {
+	  fetch('/api/auth/register', {
 		method: 'POST',
 		credentials: 'include',
 		headers: {

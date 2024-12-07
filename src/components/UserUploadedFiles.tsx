@@ -5,7 +5,7 @@ export default function UserUploadedFiles({uploaded}){
 	const [ userFiles, setUserFiles ] = useState();
 	useEffect(() => {
 		(async () => {
-			const files = await fetch('http://localhost:8080/file/userfiles', {
+			const files = await fetch('/api/file/userfiles', {
 				method: 'GET',
 				credentials: 'include',
 				headers: {
