@@ -59,9 +59,14 @@ export default function GetSingleFile({ file }: { file: { name: string } })
 				Share
 				</button>
 			</div>
-			{fileUrl &&
-				<img src={fileUrl} alt="Uploaded File" style={{ width: '100%', maxHeight: '500px' }} />
-			}
+			{fileUrl && (
+				<div>
+					<img src={fileUrl} alt="Uploaded File" style={{ width: '100%', maxHeight: '500px' }} />
+					<div style={{ marginTop: '5px', fontSize: '12px', color: '#555' }}>
+						Views: { file && file.views && file.views }
+					</div>
+				</div>
+			)}
 		</div>
 	)
 }
