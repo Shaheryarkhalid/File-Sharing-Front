@@ -45,26 +45,38 @@ export default function GetSingleFile({ file }: { file: { name: string, views: s
 			>
 			<div style={{ position: 'absolute', top: '5px', right: '5px' }}>
 				<button
-				onClick={() => shareFile(file.name)}
-				style={{
-					padding: '5px 10px',
-					fontSize: '12px',
-					cursor: 'pointer',
-					backgroundColor: '#007bff',
-					color: '#fff',
-					border: 'none',
-					borderRadius: '5px',
-				}}
-				>
-				Share
+					onClick={() => shareFile(file.name)}
+					style={{
+						padding: '5px 10px',
+						fontSize: '12px',
+						cursor: 'pointer',
+						backgroundColor: '#007bff',
+						color: '#fff',
+						border: 'none',
+						borderRadius: '5px',
+					}}
+					>
+					Share
 				</button>
+			</div>
+			<div style={{ position: 'absolute', bottom: '5px', right: '5px' }}>
+				<p
+					style={{
+						padding: '5px 5px',
+						fontSize: '12px',
+						cursor: 'pointer',
+						backgroundColor: '#007bff',
+						color: '#fff',
+						border: 'none',
+						borderRadius: '5px',
+					}}
+					>
+					Views: { file && file.views && file.views }
+				</p>
 			</div>
 			{fileUrl && (
 				<div>
 					<img src={fileUrl} alt="Uploaded File" style={{ width: '100%', maxHeight: '500px' }} />
-					<div style={{ marginTop: '5px', fontSize: '12px', color: '#555' }}>
-						Views: { file && file.views && file.views }
-					</div>
 				</div>
 			)}
 		</div>
