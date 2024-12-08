@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-export default function GetSingleFile({ file }: { file: { name: string } })
+export default function GetSingleFile({ file }: { file: { name: string, views: string } })
 {
 	const [ fileUrl, setFileUrl ] = useState<string | null>(null);
 	useEffect(()=>{
